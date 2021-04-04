@@ -27,7 +27,7 @@ Password for base auth
 ```
 uses: wowvendor/url-checker-action@v1
 with:
-  url: https://www.google.com/,https://yandex.ru
+  url: https://www.google.com/
   status: 200
   method: get
 ```
