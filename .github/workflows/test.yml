@@ -1,0 +1,22 @@
+
+name: test
+
+on:
+  push:
+    branches:
+      - master
+    tags-ignore:
+      - '*'
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run URL Checker
+        uses: wowvendor/url-checker-action@v1
+        with:
+          url: https://www.google.com/
+          status: 200
+          method: get

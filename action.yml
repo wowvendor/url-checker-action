@@ -1,0 +1,30 @@
+---
+
+name: URL Checker Action
+description: This action check urls
+inputs:
+  url:
+    required: true
+    description: URL to check
+  status:
+    required: true
+    description: Success status code
+    default: '200'
+  method:
+    required: true
+    description: Method for URL
+    default: get
+  user:
+    required: false
+    description: User for base auth
+  password:
+    required: false
+    description: Password for base auth
+
+runs:
+  using: docker
+  image: 'Dockerfile'
+
+branding:
+  icon: arrow-down
+  color: blue
